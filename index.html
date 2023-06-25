@@ -4,29 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 <title>Plazo Fijo</title>
 </head>
 	<body class="background">
 		<main class="frame">
 			<div class="group">
-				<input required="" type="text" class="input">
+				<input id="txtNombre" required="" type="text" class="input" onfocus="borrarInput(this)">
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<label>Nombre</label>
+				<label for="txtNombre">Nombre</label>
 			</div>
 			<div class="group">
-				<input required="" type="text" class="input">
+				<input id="txtApellido" required="" type="text" class="input" onfocus="borrarInput(this)">
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<label>Apellido</label>
+				<label for="txtApellido">Apellido</label>
 			</div>
 			<div class="group">
-				<input required="" type="text" class="input">
+				<input id="txtMonto" required="" type="text" class="input" onfocus="borrarInput(this)">
 				<span class="highlight"></span>
 				<span class="bar"></span>
-				<label>Monto a invertir</label>
+				<label for="txtMonto">Monto a invertir</label>
 			</div>
-			<button class="btnFacha">
+			<button class="btnFacha" onclick="textoNoVacio()">
 				<span>Calcular</span>
 			</button>
 		</main>
