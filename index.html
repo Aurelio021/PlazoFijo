@@ -7,30 +7,39 @@
 <script src="script.js"></script>
 <title>Plazo Fijo</title>
 </head>
-	<body class="background">
-		<main class="frame">
-			<div class="group">
-				<input id="txtNombre" required="" type="text" class="input" onfocus="borrarInput(this)">
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label for="txtNombre">Nombre</label>
-			</div>
-			<div class="group">
-				<input id="txtApellido" required="" type="text" class="input" onfocus="borrarInput(this)">
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label for="txtApellido">Apellido</label>
-			</div>
-			<div class="group">
-				<input id="txtMonto" required="" type="text" class="input" onfocus="borrarInput(this)">
-				<span class="highlight"></span>
-				<span class="bar"></span>
-				<label for="txtMonto">Monto a invertir</label>
-			</div>
-			<button class="btnFacha" onclick="textoNoVacio()">
-				<span>Calcular</span>
-			</button>
-		</main>
+<body class="background">
+	<main class="frame">
+		<div class="group">
+			<input id="txtNombre" required="" type="text" class="input" onfocus="borrarInput(this)">
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			<label for="txtNombre">Nombre</label>
+		</div>
+		<div class="group">
+			<input id="txtApellido" required="" type="text" class="input" onfocus="borrarInput(this)">
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			<label for="txtApellido">Apellido</label>
+		</div>
+		<div class="group">
+			<input id="txtMonto" required="" type="text" class="input" onfocus="borrarInput(this)">
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			<label for="txtMonto">Monto a invertir</label>
+		</div>
+		<div class="group">
+			<input id="txtDias" required="" type="text" class="input" onfocus="borrarInput(this)">
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			<label for="txtDias">Dias</label>
+		</div>
+		<button class="btnFacha" onclick="textoNoVacio()">
+			<span>Calcular</span>
+		</button>
+	</main>
+	<div id="frame2" class="frame2 hidden">
+		<h3 id="salida">El monto final es de: $ 0 </h3>
+		<button>Si</button>
 	</div>
 </body>
 </html>

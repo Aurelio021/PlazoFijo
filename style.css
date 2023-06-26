@@ -137,3 +137,16 @@ button:hover::before {
   right: 0;
   opacity: 1;
 }
+.frame2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #818181, #999999);
+  box-shadow:  8px 8px 16px #7a7a7a,-8px -8px 16px #a4a4a4;
+  margin: 50px;
+}
+
+.hidden{
+  display: none;
+}
