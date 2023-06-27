@@ -1,7 +1,7 @@
 function textoNoVacio(){
+    let bandera;
     do{
-        console.log()
-    let bandera = true
+    bandera=true;
     let nombre = document.getElementById("txtNombre").value;
     let apellido = document.getElementById("txtApellido").value;
     let monto = document.getElementById("txtMonto").value;
@@ -27,7 +27,8 @@ function textoNoVacio(){
     } else if(Number(dias) <= 29){
         document.getElementById("txtDias").value = "Error: Poco dias";
     }
-    bandera = false;
+    bandera=false;
+    
     }while(bandera)
 
     calculoFinal();
@@ -57,6 +58,6 @@ function calculoFinal(){
 
     let ganancia = (montoInicial * (dias / 365) * (porcentaje / 100)).toFixed(2);
 
-    document.getElementById("salida").textContent="hola"+ ganancia;
+    document.getElementById("salida").textContent = ganancia;
     document.getElementById("frame2").classList.remove("hidden");
 }
