@@ -37,9 +37,44 @@
 			<span>Calcular</span>
 		</button>
 	</main>
-	<div id="frame2" class="frame2 hidden">
-		<h3 id="salida">El monto final es de: $ 0 </h3>
-		<button>Si</button>
+	<div class="contenedor">
+		<div id="frame2" class="frame2 hidden">
+			<h4>La ganancia es de $<h3 id="salida"></h3></h4>
+			<button onclick="inversionCuadro()">Reinvertir?</button>
+		</div>
+		<div id="frame3" class="frame3 hidden">
+			<table class="steelBlueCols">
+				<thead>
+				<tr>
+				<th>Periodo</th>
+				<th>Monto Inicial</th>
+				<th>Monto Final</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td>1</td>
+				<td id="celda2-1"></td>
+				<td id="celda3-1"></td>
+				</tr>
+				<tr>
+				<td>2</td>
+				<td id="celda2-2"></td>
+				<td id="celda3-2"></td>
+				</tr>
+				<tr>
+				<td>3</td>
+				<td id="celda2-3"></td>
+				<td id="celda3-3"></td>
+				</tr>
+				<tr>
+				<td>4</td>
+				<td id="celda2-4"></td>
+				<td id="celda3-4"></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
