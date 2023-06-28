@@ -1,36 +1,56 @@
 function textoNoVacio() {
-  let bandera;
-  do {
-    bandera = true;
-    let nombre = document.getElementById("txtNombre").value;
-    let apellido = document.getElementById("txtApellido").value;
-    let monto = document.getElementById("txtMonto").value;
-    let dias = document.getElementById("txtDias").value;
+  document.getElementById("btn1").disabled = true;
 
+  let nombre = document.getElementById("txtNombre").value;
+  let apellido = document.getElementById("txtApellido").value;
+  let monto = document.getElementById("txtMonto").value;
+  let dias = document.getElementById("txtDias").value;
+
+  let validarCampos = new Promise((resolve, reject) => {
     if (nombre === "") {
       document.getElementById("txtNombre").value = "Error: Vacio";
+      reject();
     }
     if (apellido === "") {
       document.getElementById("txtApellido").value = "Error: Vacio";
+      reject();
     }
     if (monto === "") {
       document.getElementById("txtMonto").value = "Error: Vacio";
+      reject();
     } else if (isNaN(monto)) {
       document.getElementById("txtMonto").value = "Error: Solo Numeros";
+      reject();
     } else if (Number(monto) <= 999) {
       document.getElementById("txtMonto").value = "Error: Monto inválido";
+      reject();
     }
     if (dias === "") {
       document.getElementById("txtDias").value = "Error: Vacio";
+      reject();
     } else if (isNaN(dias)) {
       document.getElementById("txtDias").value = "Error: Solo Numeros";
+      reject();
     } else if (Number(dias) <= 29) {
       document.getElementById("txtDias").value = "Error: Poco dias";
+      reject();
     }
-    bandera = false;
+    resolve();
+  });
+  validarCampos.then(() => {
+    setTimeout(() => {
+      document.getElementById("txtNombre").value = "";
+      document.getElementById("txtApellido").value = "";
+      document.getElementById("txtMonto").value = "";
+      document.getElementById("txtDias").value = "";
 
-  } while (bandera)
-  calculoFinal();
+      document.getElementById("btn1").disabled = false;
+    }, 3000);
+
+    calculoFinal();
+  }).catch(() => {
+    document.getElementById("btn1").disabled = false;
+  });
 }
 
 function borrarInput(elemento) {

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="G:\Visual Code\PlazoFijo\images\Iconic.png">
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 <title>Plazo Fijo</title>
@@ -33,14 +34,14 @@
 			<span class="bar"></span>
 			<label for="txtDias">Dias</label>
 		</div>
-		<button class="btnFacha" onclick="textoNoVacio()">
+		<button id="btn1" class="btnFacha" onclick="textoNoVacio()">
 			<span>Calcular</span>
 		</button>
 	</main>
 	<div class="contenedor">
 		<div id="frame2" class="frame2 hidden">
-			<h4>La ganancia es de $<h3 id="salida"></h3></h4>
-			<button onclick="inversionCuadro()">Reinvertir?</button>
+			<h4>La ganancia es de $<h3 id="salida" class="salida"></h3></h4>
+			<button id="btn2" onclick="inversionCuadro()">Reinvertir?</button>
 		</div>
 		<div id="frame3" class="frame3 hidden">
 			<table class="steelBlueCols">
